@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDolarAlis = new System.Windows.Forms.Label();
-            this.lblDolarSatis = new System.Windows.Forms.Label();
-            this.lblEuroAlis = new System.Windows.Forms.Label();
-            this.lblEuroSatis = new System.Windows.Forms.Label();
+            this.lblDolar = new System.Windows.Forms.Label();
+            this.lblEuro = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -42,45 +40,25 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // lblDolarAlis
+            // lblDolar
             // 
-            this.lblDolarAlis.AutoSize = true;
-            this.lblDolarAlis.Location = new System.Drawing.Point(127, 19);
-            this.lblDolarAlis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDolarAlis.Name = "lblDolarAlis";
-            this.lblDolarAlis.Size = new System.Drawing.Size(51, 21);
-            this.lblDolarAlis.TabIndex = 0;
-            this.lblDolarAlis.Text = "label1";
+            this.lblDolar.AutoSize = true;
+            this.lblDolar.Location = new System.Drawing.Point(136, 29);
+            this.lblDolar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDolar.Name = "lblDolar";
+            this.lblDolar.Size = new System.Drawing.Size(51, 21);
+            this.lblDolar.TabIndex = 0;
+            this.lblDolar.Text = "label1";
             // 
-            // lblDolarSatis
+            // lblEuro
             // 
-            this.lblDolarSatis.AutoSize = true;
-            this.lblDolarSatis.Location = new System.Drawing.Point(127, 65);
-            this.lblDolarSatis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDolarSatis.Name = "lblDolarSatis";
-            this.lblDolarSatis.Size = new System.Drawing.Size(54, 21);
-            this.lblDolarSatis.TabIndex = 1;
-            this.lblDolarSatis.Text = "label2";
-            // 
-            // lblEuroAlis
-            // 
-            this.lblEuroAlis.AutoSize = true;
-            this.lblEuroAlis.Location = new System.Drawing.Point(364, 28);
-            this.lblEuroAlis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEuroAlis.Name = "lblEuroAlis";
-            this.lblEuroAlis.Size = new System.Drawing.Size(54, 21);
-            this.lblEuroAlis.TabIndex = 2;
-            this.lblEuroAlis.Text = "label3";
-            // 
-            // lblEuroSatis
-            // 
-            this.lblEuroSatis.AutoSize = true;
-            this.lblEuroSatis.Location = new System.Drawing.Point(364, 65);
-            this.lblEuroSatis.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEuroSatis.Name = "lblEuroSatis";
-            this.lblEuroSatis.Size = new System.Drawing.Size(54, 21);
-            this.lblEuroSatis.TabIndex = 3;
-            this.lblEuroSatis.Text = "label4";
+            this.lblEuro.AutoSize = true;
+            this.lblEuro.Location = new System.Drawing.Point(368, 29);
+            this.lblEuro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEuro.Name = "lblEuro";
+            this.lblEuro.Size = new System.Drawing.Size(54, 21);
+            this.lblEuro.TabIndex = 2;
+            this.lblEuro.Text = "label3";
             // 
             // textBox1
             // 
@@ -144,6 +122,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "İşlemi Yap";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -177,10 +156,8 @@
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblEuroSatis);
-            this.Controls.Add(this.lblEuroAlis);
-            this.Controls.Add(this.lblDolarSatis);
-            this.Controls.Add(this.lblDolarAlis);
+            this.Controls.Add(this.lblEuro);
+            this.Controls.Add(this.lblDolar);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -197,10 +174,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDolarAlis;
-        private System.Windows.Forms.Label lblDolarSatis;
-        private System.Windows.Forms.Label lblEuroAlis;
-        private System.Windows.Forms.Label lblEuroSatis;
+        private System.Windows.Forms.Label lblDolar;
+        private System.Windows.Forms.Label lblEuro;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;

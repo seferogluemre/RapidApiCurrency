@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace RapidApiCurrencyApp
 {
@@ -15,6 +11,34 @@ namespace RapidApiCurrencyApp
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private async void GetResponseData()
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://currency-conversion-and-exchange-rates.p.rapidapi.com/convert?from=USD&to=TRY&amount=1"),
+                Headers =
+                {
+                    { "x-rapidapi-key", "55c6fcf8a4mshcbae495cb9210fcp1d4d97jsn3670f85038cf" },
+                    { "x-rapidapi-host", "currency-conversion-and-exchange-rates.p.rapidapi.com" },
+                },
+            };
+
+            using (var response = await client.SendAsync(request))
+            {
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                MessageBox.Show(body.ToString());
+            }
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GetResponseData();
         }
 
         private void Form1_Load(object sender, EventArgs e)
