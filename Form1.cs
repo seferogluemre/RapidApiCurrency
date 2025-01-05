@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,7 +32,11 @@ namespace RapidApiCurrencyApp
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                MessageBox.Show(body.ToString());
+                var json=JObject.Parse(body);
+                var value = json["result"].ToString();
+                lblDolar.Text = value.ToString();
+
+
             }
         }
 
@@ -43,7 +48,6 @@ namespace RapidApiCurrencyApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
